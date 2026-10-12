@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karim Chaya — Crecimiento Digital</title>
+<meta name="description" content="Analicemos cómo está tu marca hoy y trabajemos juntos para hacerla crecer. Pedí tu análisis gratis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root {
+    --white: #FFFFFF; --ink: #111111; --blue: #2440FF; --grey: #6B6B70; --panel: #F3F3F5; --hair: #E2E2E6;
+    --navy: #0B1238; --navy-3: #1B2452; --mist: #B9C0E4; --sky: #8C9BFF;
+    --gutter: 20px;
+    --ease: cubic-bezier(.22, .61, .36, 1);
+    --lift: 0 1px 2px rgba(11, 18, 56, .06), 0 10px 24px rgba(11, 18, 56, .08), 0 36px 64px -20px rgba(11, 18, 56, .22);
+    --lift-hi: 0 2px 4px rgba(11, 18, 56, .08), 0 18px 36px rgba(11, 18, 56, .12), 0 56px 90px -24px rgba(36, 64, 255, .34);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--white); color: var(--ink); font-family: Poppins, system-ui, sans-serif; font-size: 17px; line-height: 1.55; padding-bottom: 78px; overflow-x: hidden; }
+  a { color: inherit; }
+  h1, h2, h3 { font-weight: 800; text-transform: uppercase; line-height: 1.08; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(33px, 6.6vw, 76px); }
+  h2 { font-size: clamp(28px, 7.4vw, 60px); }
+  h3 { font-size: clamp(19px, 4.6vw, 24px); line-height: 1.15; }
+  .label { font-family: Inter, system-ui, sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey); }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 var(--gutter); }
+  section { position: relative; padding: 72px 0; scroll-margin-top: 64px; }
+  .alt { background: var(--panel); }
+  .rule { width: 96px; height: 8px; background: var(--blue); margin: 22px 0 26px; transform-origin: left; }
+  .note { font-size: 15px; color: var(--grey); margin-top: 16px; }
+  .pill { position: relative; display: inline-flex; align-items: center; gap: 10px; background: var(--blue); color: var(--white); font-weight: 700; text-transform: uppercase; text-decoration: none; white-space: nowrap; font-size: clamp(14px, 3.9vw, 16px); letter-spacing: 0.01em; padding: 17px 26px; border-radius: 999px; min-height: 48px; box-shadow: 0 10px 26px -10px rgba(36, 64, 255, .7); transition: background .25s, color .25s, box-shadow .25s, translate .25s var(--ease); }
+  .pill::after { content: "→"; transition: translate .25s var(--ease); }
+  .pill:hover, .pill:focus-visible { background: var(--ink); translate: 0 -2px; box-shadow: 0 16px 30px -12px rgba(11, 18, 56, .6); }
+  .pill:hover::after, .pill:focus-visible::after { translate: 4px 0; }
+  header { position: fixed; inset: 0 0 auto 0; z-index: 20; background: var(--navy); color: var(--white); transition: background .3s, box-shadow .3s; }
+  header.solid { background: rgba(11, 18, 56, .88); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 10px 30px -14px rgba(0, 0, 0, .55); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; }
+  .brand { font-weight: 800; text-transform: uppercase; text-decoration: none; font-size: 16px; letter-spacing: 0.01em; }
+  header nav { display: none; gap: 28px; }
+  header nav a { text-decoration: none; font-size: 16px; font-weight: 500; background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat; padding-bottom: 4px; transition: background-size .3s var(--ease); }
+  header nav a:hover, header nav a:focus-visible { background-size: 100% 2px; }
+  header .pill { display: none; padding: 11px 20px; font-size: 13px; min-height: 0; }
+  header .pill:hover, header .pill:focus-visible { background: var(--white); color: var(--navy); }
+  .progress { position: absolute; inset: auto 0 0 0; height: 3px; background: var(--blue); transform: scaleX(0); transform-origin: left; }
+  .bar { position: fixed; inset: auto 0 0 0; z-index: 20; background: var(--white); border-top: 1px solid var(--hair); padding: 10px var(--gutter); }
+  .bar .pill { display: flex; justify-content: center; }
+  #inicio { overflow: hidden; text-align: center; padding: 104px 0 0; }
+  .grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(11, 18, 56, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(11, 18, 56, .06) 1px, transparent 1px); background-size: 64px 64px; -webkit-mask-image: radial-gradient(ellipse 78% 72% at 50% 38%, #000 12%, transparent 74%); mask-image: radial-gradient(ellipse 78% 72% at 50% 38%, #000 12%, transparent 74%); }
+  .orb { position: absolute; border-radius: 50%; pointer-events: none; transition: translate .6s ease-out; }
+  .orb.a { width: 600px; height: 600px; right: -170px; bottom: -260px; background: radial-gradient(circle, rgba(36, 64, 255, .30), rgba(36, 64, 255, 0) 68%); translate: calc(var(--sx, 0) * -36px) calc(var(--sy, 0) * -26px); }
+  .orb.b { width: 440px; height: 440px; left: -190px; top: -140px; background: radial-gradient(circle, rgba(140, 155, 255, .30), rgba(140, 155, 255, 0) 70%); translate: calc(var(--sx, 0) * 30px) calc(var(--sy, 0) * 22px); }
+  #inicio .wrap { position: relative; }
+  #inicio h1 { text-wrap: balance; }
+  br.corte { display: none; }
+  .w { display: inline-block; overflow: hidden; vertical-align: top; padding: .16em 0 .1em; margin: -.16em 0 -.1em; }
+  .w > span { display: inline-block; }
+  .hl { position: relative; display: inline-block; padding: 0 .14em; margin: 0 -.04em; isolation: isolate; color: var(--white); }
+  .hl::before { content: ""; position: absolute; inset: .12em 0 .04em; background: var(--blue); z-index: -1; transform-origin: left; }
+  #inicio .lead { font-size: 24px; line-height: 1.35; max-width: 24em; margin: 22px auto 28px; text-wrap: balance; }
+  #inicio .note { max-width: 36em; margin: 18px auto 0; text-wrap: balance; }
+  .stage { position: relative; width: min(100%, 300px); margin: 26px auto 0; }
+  .plate { position: absolute; bottom: 0; border-radius: 28px 28px 0 0; }
+  .plate.back { left: -2%; right: 10%; height: 58%; border: 1.5px solid rgba(11, 18, 56, .2); border-bottom: 0; rotate: -4deg; transform-origin: 50% 100%; translate: calc(var(--sx, 0) * -10px) 0; transition: translate .6s ease-out; }
+  .plate.front { left: 5%; right: 5%; height: 60%; background: var(--blue) linear-gradient(rgba(255, 255, 255, .09) 1px, transparent 1px) 0 0 / 34px 34px; background-image: linear-gradient(rgba(255, 255, 255, .09) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .09) 1px, transparent 1px); background-size: 34px 34px; box-shadow: 0 30px 60px -22px rgba(36, 64, 255, .6), inset 0 1px 0 rgba(255, 255, 255, .25); }
+  .foto { position: relative; display: block; width: 100%; height: auto; translate: calc(var(--sx, 0) * 8px) 0; transition: translate .6s ease-out; }
+  .player-wrap { perspective: 1400px; }
+  .player { position: relative; border-radius: 22px; overflow: hidden; background: var(--ink); box-shadow: var(--lift-hi); transform-origin: 50% 100%; transform: rotateX(calc((1 - var(--p, 1)) * 14deg)) scale(calc(.93 + var(--p, 1) * .07)); }
+  .clip { display: block; width: 100%; aspect-ratio: 16 / 9; background: var(--ink); }
+  .tl { position: relative; display: grid; gap: 34px; padding-left: 62px; margin-top: 8px; }
+  .tl::before { content: ""; position: absolute; left: 20px; top: 10px; bottom: 10px; width: 4px; background: var(--ink); transform-origin: top; }
+  .paso { position: relative; }
+  .paso p { color: #333; margin-top: 8px; }
+  .nodo { position: absolute; left: -62px; top: -6px; width: 44px; height: 44px; border-radius: 50%; background: var(--blue); color: var(--white); display: grid; place-items: center; font-family: Inter, system-ui, sans-serif; font-weight: 600; font-size: 18px; z-index: 1; box-shadow: 0 0 0 6px var(--panel), 0 12px 22px -8px rgba(36, 64, 255, .75); transition: scale .3s var(--ease); }
+  .paso:hover .nodo { scale: 1.12; }
+  .eje { display: none; }
+  .card { background: var(--white); border: 1px solid var(--hair); border-radius: 22px; margin: 34px 0; box-shadow: var(--lift); transition: translate .35s var(--ease), box-shadow .35s; }
+  .card:not([open]) { max-width: 30em; }
+  .card:not([open]):hover { translate: 0 -3px; box-shadow: var(--lift-hi); }
+  .card summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; font-weight: 600; min-height: 48px; }
+  .card summary::-webkit-details-marker { display: none; }
+  .card summary::after { content: "+"; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--blue); color: var(--white); display: grid; place-items: center; font-weight: 600; font-size: 22px; line-height: 1; transition: rotate .3s var(--ease); }
+  .card[open] summary::after { rotate: 45deg; }
+  .card[open] summary { border-bottom: 1px solid var(--hair); }
+  .card h3 { padding: 24px 22px 0; }
+  .card ol.sheet { margin: 14px 22px 10px; }
+  .card ol.sheet li:first-child { border-top: 0; }
+  ol.sheet { list-style: none; padding: 0; counter-reset: s; }
+  ol.sheet li { counter-increment: s; display: grid; grid-template-columns: 2.6em 1fr; padding: 14px 0; border-top: 1px solid var(--hair); }
+  ol.sheet li::before { content: counter(s); width: 1.9em; height: 1.9em; border-radius: 50%; background: var(--panel); display: grid; place-items: center; font-family: Inter, sans-serif; font-weight: 600; font-size: 14px; color: var(--blue); }
+  ol.sheet strong { display: block; font-weight: 600; }
+  ol.sheet span { color: #444; font-size: 15px; }
+  .dark { background: var(--navy); color: var(--white); overflow: hidden; }
+  .dark::before { content: ""; position: absolute; inset: 0; background: radial-gradient(520px circle at var(--mx, 78%) var(--my, 20%), rgba(36, 64, 255, .38), transparent 64%); pointer-events: none; }
+  .dark .wrap { position: relative; display: grid; gap: 40px; }
+  .dark p { max-width: 30em; margin-top: 16px; font-size: 19px; color: #DDE1F6; }
+  .dark .pill { margin-top: 30px; }
+  .dark .pill:hover, .dark .pill:focus-visible { background: var(--white); color: var(--navy); }
+  .ring { position: absolute; border-radius: 50%; border: 1.5px solid rgba(185, 192, 228, .18); pointer-events: none; }
+  .ring.r1 { width: 520px; height: 520px; right: -150px; top: -190px; }
+  .ring.r2 { width: 300px; height: 300px; left: -120px; bottom: -170px; border-color: rgba(36, 64, 255, .6); }
+  .frame { position: relative; margin: 18px 16px 34px 12px; }
+  .frame::before { content: ""; position: absolute; inset: -18% -14%; background: radial-gradient(closest-side, rgba(36, 64, 255, .55), rgba(36, 64, 255, 0)); pointer-events: none; }
+  .bk { position: absolute; inset: 0; border-radius: 26px; transition: translate .9s var(--ease) .35s, rotate .9s var(--ease) .35s; }
+  .bk.a { background-color: var(--blue); background-image: linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .1) 1px, transparent 1px); background-size: 34px 34px; box-shadow: 0 34px 60px -22px rgba(36, 64, 255, .8); translate: 20px 22px; rotate: 2.2deg; }
+  .bk.b { border: 1.5px solid rgba(185, 192, 228, .45); translate: -16px -16px; rotate: -3deg; }
+  .frame:hover .bk.a { translate: 26px 28px; transition-delay: 0s; transition-duration: .4s; }
+  .frame:hover .bk.b { translate: -22px -22px; transition-delay: 0s; transition-duration: .4s; }
+  .screen { position: relative; aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden; background: var(--navy-3); display: grid; place-items: center; box-shadow: 0 0 0 3px var(--white), 0 40px 70px -24px rgba(0, 0, 0, .8); }
+  .screen .glow { position: absolute; inset: -30%; background: radial-gradient(circle at 30% 35%, rgba(36, 64, 255, .75), transparent 46%), radial-gradient(circle at 74% 70%, rgba(140, 155, 255, .32), transparent 42%); }
+  .screen .grid-bg { background-image: linear-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .06) 1px, transparent 1px); -webkit-mask-image: none; mask-image: none; }
+  .play { position: relative; width: clamp(60px, 9vw, 92px); aspect-ratio: 1; border-radius: 50%; background: var(--white); display: grid; place-items: center; box-shadow: 0 18px 40px -10px rgba(0, 0, 0, .5); }
+  .play::before { content: ""; border-left: clamp(16px, 2.4vw, 24px) solid var(--blue); border-top: clamp(10px, 1.5vw, 15px) solid transparent; border-bottom: clamp(10px, 1.5vw, 15px) solid transparent; margin-left: 12%; }
+  .play i { position: absolute; inset: 0; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .6); }
+  .screen .label { position: absolute; left: 18px; bottom: 16px; color: var(--mist); }
+  footer { height: 10px; background: var(--white); }
+  @media (prefers-reduced-motion: no-preference) {
+    .js .rv { opacity: 0; translate: 0 34px; transition: opacity .7s var(--ease), translate .7s var(--ease); transition-delay: calc(var(--i, 0) * 90ms); }
+    .js .rv.on { opacity: 1; translate: 0 0; }
+    .js .frame:not(.on) .bk { translate: 0 0; rotate: 0deg; }
+    .js .in .rule { transform: scaleX(0); transition: transform .55s var(--ease) .1s; }
+    .js .in.on .rule { transform: scaleX(1); }
+
+    .js #inicio .lead, .js #inicio .cta, .js #inicio .note { animation: rise .8s var(--ease) both; }
+    .js #inicio .lead { animation-delay: .5s; }
+    .js #inicio .cta { animation-delay: .65s; }
+    .js #inicio .note { animation-delay: .8s; }
+    .js .w > span { animation: word .85s var(--ease) both; animation-delay: calc(var(--i) * 80ms + .1s); }
+    .js .hl { animation: ink .01s linear both .78s; }
+    .js .hl::before { animation: wipe .55s var(--ease) both .62s; }
+    .js .plate.front, .js .foto { animation: rise 1s var(--ease) both .25s; }
+    .js .plate.back { animation: fade 1.2s ease both .6s; }
+    .orb.a { animation: drift 14s ease-in-out infinite alternate; }
+
+    .js .tl::before, .js .eje { scale: var(--draw, 1 0); transition: scale 1s var(--ease) .15s; }
+    .js .tl.on::before, .js .tl.on .eje { scale: 1 1; }
+    .js .nodo { scale: 0; transition: scale .45s var(--ease); transition-delay: calc(var(--c) * 140ms + .1s); }
+    .js .tl.on .nodo { scale: 1; }
+    .js .tl.on .paso:hover .nodo { scale: 1.12; transition-delay: 0s; }
+    .js .paso h3, .js .paso p { opacity: 0; translate: 0 16px; transition: opacity .6s var(--ease), translate .6s var(--ease); transition-delay: calc(var(--c) * 140ms + .25s); }
+    .js .tl.on .paso h3, .js .tl.on .paso p { opacity: 1; translate: 0 0; }
+    .card[open] h3, .card[open] ol.sheet li { animation: rise .5s var(--ease) both; }
+    .card[open] ol.sheet li:nth-child(1) { animation-delay: .08s; }
+    .card[open] ol.sheet li:nth-child(2) { animation-delay: .16s; }
+    .card[open] ol.sheet li:nth-child(3) { animation-delay: .24s; }
+    .card[open] ol.sheet li:nth-child(4) { animation-delay: .32s; }
+
+    .screen .glow { animation: spin 26s linear infinite; }
+    .play i { animation: ping 2.6s ease-out infinite; }
+    .play i:nth-child(2) { animation-delay: 1.3s; }
+    .ring.r1 { animation: spin 60s linear infinite; border-style: dashed; }
+  }
+  @keyframes rise { from { opacity: 0; translate: 0 30px; } }
+  @keyframes fade { from { opacity: 0; } }
+  @keyframes word { from { translate: 0 115%; } }
+  @keyframes wipe { from { transform: scaleX(0); } }
+  @keyframes ink { from { color: var(--ink); } }
+  @keyframes drift { to { transform: translate(-50px, -40px) scale(1.1); } }
+  @keyframes spin { to { rotate: 360deg; } }
+  @keyframes ping { from { scale: 1; opacity: .8; } to { scale: 1.9; opacity: 0; } }
+
+  @media (min-width: 768px) {
+    :root { --gutter: 40px; }
+    body { padding-bottom: 0; }
+    .bar { display: none; }
+    header .wrap { height: 64px; }
+    header .pill { display: inline-flex; }
+    section { padding: 104px 0; }
+    br.corte { display: inline; }
+    #inicio { padding-top: 132px; }
+    #inicio .lead { font-size: 30px; }
+    #inicio .pill { padding: 19px 48px; }
+    .card summary { padding: 20px 28px; }
+    .card h3 { padding: 30px 28px 0; }
+    .card ol.sheet { margin: 14px 28px 14px; }
+  }
+  @media (min-width: 1200px) {
+    header nav { display: flex; }
+    header .wrap { justify-content: center; gap: 44px; }
+    #inicio { padding: 168px 0 112px; }
+    #inicio .wrap { max-width: 62vw; }
+    #inicio h1 { font-size: clamp(44px, 4.2vw, 78px); }
+    .stage { position: absolute; right: max(24px, calc((100vw - 1800px) / 2)); bottom: 0; width: clamp(260px, 23vw, 400px); margin: 0; }
+    .tl { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 32px; row-gap: 0; padding-left: 0; }
+    .tl::before { display: none; }
+    .eje { --draw: 0 1; transform-origin: left; }
+    .paso { grid-column: var(--c); padding-right: 12px; }
+    .paso.arriba { grid-row: 1; align-self: end; padding-bottom: 44px; }
+    .paso.arriba p { width: var(--ancho, auto); }
+    .paso.abajo { grid-row: 3; padding-top: 44px; }
+    .eje { display: block; grid-row: 2; grid-column: 1 / -1; height: 4px; background: var(--ink); }
+    .nodo { left: 0; top: auto; }
+    .paso.arriba .nodo { bottom: -24px; }
+    .paso.abajo .nodo { top: -24px; }
+    .dark .wrap { grid-template-columns: .82fr 1.18fr; gap: 72px; align-items: center; }
+    .frame { margin: 24px 30px 40px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#inicio">Karim Chaya</a>
+    <nav>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#como-trabajo">Cómo trabajo</a>
+      <a href="#sobre-mi">Sobre mí</a>
+    </nav>
+    <a class="pill wa" href="#">Pedí tu análisis gratis</a>
+  </div>
+  <div class="progress"></div>
+</header>
+
+<main>
+  <section id="inicio" class="alt">
+    <div class="grid-bg"></div>
+    <div class="orb a"></div>
+    <div class="orb b"></div>
+    <div class="wrap">
+      <h1 aria-label="¿Cómo puede crecer tu negocio?">
+        <span class="w" style="--i:0"><span>¿Cómo</span></span>
+        <span class="w" style="--i:1"><span>puede</span></span>
+        <span class="hl"><span class="w" style="--i:2"><span>crecer</span></span></span>
+        <br class="corte"><span class="w" style="--i:3"><span>tu</span></span>
+        <span class="w" style="--i:4"><span>negocio?</span></span>
+      </h1>
+      <p class="lead">Analicemos cómo está tu marca hoy y trabajemos juntos para hacerla crecer.</p>
+      <div class="cta"><a class="pill wa" href="#">Pedí tu análisis gratis</a></div>
+      <p class="note">En 48 horas recibís una hoja con los tres puntos por donde podés crecer.</p>
+    </div>
+    <div class="stage">
+      <div class="plate back"></div>
+      <div class="plate front"></div>
+      <img class="foto" src="foto1-cutout.webp" width="1000" height="1333" alt="Karim Chaya">
+    </div>
+  </section>
+
+  <section id="trabajos" class="in">
+    <div class="wrap">
+      <div class="rv">
+        <h2>Selección de trabajos</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="player-wrap">
+        <div class="player"><video class="clip" controls preload="none" playsinline poster="video/reel.jpg" src="video/reel.mp4"></video></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-trabajo" class="in alt">
+    <div class="wrap">
+      <div class="rv">
+        <h2>Cómo trabajo</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="tl">
+        <div class="paso arriba" style="--c:1;--ancho:300px"><span class="nodo">1</span><h3>Reunión y análisis</h3><p>Nos juntamos 15 minutos en tu negocio. A las 48 horas recibís la hoja con los 3 puntos por donde podés crecer.</p></div>
+        <div class="paso abajo" style="--c:2"><span class="nodo">2</span><h3>Roadmap</h3><p>Definimos la estrategia de marketing y campañas para cumplir los objetivos de crecimiento planteados.</p></div>
+        <div class="paso arriba" style="--c:3;--ancho:360px"><span class="nodo">3</span><h3>Plan mensual</h3><p>Realización de las publicaciones, videos y anuncios acordados. Análisis de resultados y planificación para el mes próximo.</p></div>
+        <div class="paso abajo" style="--c:4"><span class="nodo">4</span><h3>Proyectos aparte</h3><p>Identidad de marca, tienda online o aplicación según la necesidad de tu negocio.</p></div>
+        <div class="eje"></div>
+      </div>
+      <details class="card">
+        <summary>Ver un ejemplo del análisis</summary>
+        <h3>Ejemplo análisis: “Por dónde podés crecer”</h3>
+        <ol class="sheet">
+          <li><div><strong>El perfil de Google tiene 28 reseñas de cinco estrellas y dos fotos de la fachada.</strong><span>Fotos de diez trabajos, horarios y botón de WhatsApp. Una semana.</span></div></li>
+          <li><div><strong>Las consultas llegan por Instagram y nadie las cuenta.</strong><span>Un sitio de una página con galería y botón de WhatsApp medido. Dos semanas.</span></div></li>
+          <li><div><strong>Quien busca «muebles a medida» en Google ve a tres competidores antes.</strong><span>Una campaña de búsqueda en Google desde el primer mes.</span></div></li>
+          <li><div><strong>Cada mes revisamos la estrategia y los números objetivo.</strong><span>Adaptamos lo que haga falta y probamos de nuevo.</span></div></li>
+        </ol>
+      </details>
+      <div class="rv"><a class="pill wa" href="#">Pedí tu análisis gratis</a></div>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="dark in">
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+    <div class="wrap">
+      <div class="rv">
+        <h2>Quién soy</h2>
+        <div class="rule"></div>
+        <p style="margin-top:0">Soy Karim Chaya. Lidero proyectos de marketing y uso inteligencia artificial personalizada para el crecimiento digital de negocios.</p>
+        <a class="pill wa" href="#">Pedí tu análisis gratis</a>
+      </div>
+            <div class="frame rv" style="--i:1">
+        <div class="bk b"></div>
+        <div class="bk a"></div>
+        <div class="screen"><video class="clip" controls preload="none" playsinline poster="video/presentacion.jpg" src="video/presentacion.mp4" aria-label="Video de presentación"></video></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer></footer>
+
+<div class="bar"><a class="pill wa" href="#">Pedí tu análisis gratis</a></div>
+
+<script>
+  const wa = 'https://wa.me/5493413621965?text=' + encodeURIComponent('Hola Karim, vi tu página y quiero pedir el análisis gratis de mi negocio.');
+  document.querySelectorAll('.wa').forEach((a) => { a.href = wa; a.target = '_blank'; a.rel = 'noopener'; });
+
+  const motion = matchMedia('(prefers-reduced-motion: no-preference)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold: 0.15});
+  document.querySelectorAll('.rv, .in, .tl').forEach((el) => io.observe(el));
+  const header = document.querySelector('header');
+  const progress = document.querySelector('.progress');
+  const player = document.querySelector('.player');
+  let ticking = false;
+  const onScroll = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+    header.classList.toggle('solid', scrollY > 24);
+    if (motion) player.style.setProperty('--p', clamp((innerHeight - player.getBoundingClientRect().top) / (innerHeight * 0.7), 0, 1).toFixed(3));
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, {passive: true});
+  addEventListener('resize', onScroll);
+  onScroll();
+
+  if (motion && fine) {
+    const hero = document.getElementById('inicio');
+    hero.addEventListener('pointermove', (e) => {
+      const r = hero.getBoundingClientRect();
+      hero.style.setProperty('--sx', ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
+      hero.style.setProperty('--sy', ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
+    });
+    hero.addEventListener('pointerleave', () => { hero.style.setProperty('--sx', 0); hero.style.setProperty('--sy', 0); });
+    const dark = document.querySelector('.dark');
+    dark.addEventListener('pointermove', (e) => {
+      const r = dark.getBoundingClientRect();
+      dark.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      dark.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  }
+</script>
+</body>
+</html>
